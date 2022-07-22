@@ -7,8 +7,16 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { Webnav } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Characters from "./views/characters.jsx";
+import Planets from "./views/planets.jsx";
+import Starships from "./views/starships.jsx";
+import Details from "./views/details.jsx";
+import DetailsC from "./views/detailsc.jsx";
+import DetailsShip from "./views/detailsship.jsx";
+import Favorites from "./views/favorites.jsx";
+
 
 //create your first component
 const Layout = () => {
@@ -20,16 +28,28 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<Webnav />
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route exact path="/characters">
+							<Characters />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/planets">
+							<Planets />
+						</Route>
+						<Route exact path="/starships">
+							<Starships />
+						</Route>
+						<Route exact path="/planets/:id">
+							<Details />
+						</Route>
+						<Route exact path="/characters/:id">
+							<DetailsC />
+						</Route>
+						<Route exact path="/starships/:id">
+							<DetailsShip/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import { Github } from "react-bootstrap-icons";
 
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
+		<div className="footer-text">
+			<span>Made by Samuel Djekki</span>
+		</div>
+		<div className="icons">
+			<a className="github" href="https://github.com/samu1243">
+			<Github />
+			</a>
+		</div>
 	</footer>
 );
